@@ -1,4 +1,4 @@
-
+let datastructures = ['Stack and Queue','Linked List','Binary Tree','Binary Search Tree','Garaph','HashMap','HashSet','Priority Queues','Tries']
 let stackEasy = [{
    question:'Implement two stacks in an Array',
    company:' 24*7 Innovation Labs Microsoft Samsung Snapdeal',
@@ -410,4 +410,21 @@ document.addEventListener("DOMContentLoaded", function () {
    setList(data,index);
  })
 });
+
+let dsaCardSection = document.querySelector('.DsaCard');
+
+function datastructureBanner(data){
+  let div = document.createElement('div');
+  div.classList.add('mt-4','mb-3','px-2','py-2')
+  div.innerHTML =`
+  <div class="card cards" style="width:12rem">
+    <div class="card-body" >
+     <div class="card-text">
+      <p class="text-center">${data}</p>
+     </div>`
+
+    dsaCardSection.appendChild(div);
+}
+
+datastructures.map((data) => datastructureBanner(data));
 
